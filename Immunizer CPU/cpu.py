@@ -1,18 +1,21 @@
 import pyautogui as pg
 from time import sleep
 
-sleep(2)
+
 count = 0
 my = 200
 mx = 400
 
 
 cmax = 5 #amount of times to craft
-a = 3630 #How many H-Alloy do you have
 b = 30 #Do not change, Amount to craft one ImmunizerCpu
-cmax = a / b #total to craft
 
-
+cmaxs = pg.prompt('Enter how many alloy do you want to use.')
+cmax = int(cmaxs)
+cmax = int(cmaxs) / b #total to craft
+cmax = int(cmax)
+pg.alert("When you press OK the program will start in 3 seconds.\nUse ctrl+c in the terminal to terminate the program\nThe program will use: " + str(int(cmaxs)) + " H-Alloy to craft: " + str(cmax) + " CPU\'s")
+sleep(3)
 def ImmunizerCpuClicker():
     pg.moveTo(100,0)
     alloyloc = pg.locateOnScreen('images/alloy.png')
