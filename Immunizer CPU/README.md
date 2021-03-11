@@ -6,4 +6,8 @@
 - You can manually change the value of cpus to make by changing the value in line 10. > cmax = **newamount**
 - Run the module
 
+Other information:  
+  Install pyautogui
+  > pip install pyautogui  
+
 ### NOTE: make sure the cpu.py and images folder are in the same destination.
